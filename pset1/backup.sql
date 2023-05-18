@@ -1,5 +1,4 @@
 
-
 /*Apaga o banco de dados uvv*/
 
 DROP DATABASE IF EXISTS uvv;
@@ -59,18 +58,18 @@ COMMENT ON COLUMN uvv.lojas.produtos.imagem_ultima_atualizacao  IS 'Data de ulti
 
 /*Tabela que armazena os lojas*/
 CREATE TABLE uvv.lojas.lojas (
-                loja_id NUMERIC(38) NOT NULL,
-                nome_lojas VARCHAR(255) NOT NULL,
-                endereco_web VARCHAR(100),
-                endereco_fisico VARCHAR(512),
-                latitude NUMERIC,
-                longitude NUMERIC,
-                logo BYTEA,
-                logo_mime_type VARCHAR(512),
-                logo_arquivo VARCHAR(512),
-                logo_charset VARCHAR(512),
+                loja_id 				NUMERIC(38) NOT NULL,
+                nome_lojas 				VARCHAR(255) NOT NULL,
+                endereco_web 			VARCHAR(100),
+                endereco_fisico 		VARCHAR(512),
+                latitude 				NUMERIC,
+                longitude 				NUMERIC,
+                logo 					BYTEA,
+                logo_mime_type 			VARCHAR(512),
+                logo_arquivo 			VARCHAR(512),
+                logo_charset 			VARCHAR(512),
                 logo_ultima_atualizacao DATE,
-                CONSTRAINT pk_lojas PRIMARY KEY (loja_id)
+                CONSTRAINT pk_lojas 	PRIMARY KEY (loja_id)
 );
 /*Comentarios da tabela lojas*/
 COMMENT ON TABLE uvv.lojas.lojas 								IS 'Tabela responsavél por armazenar dados sobre as lojas.';
@@ -88,8 +87,8 @@ COMMENT ON COLUMN uvv.lojas.lojas.logo_ultima_atualizacao 		IS 'Data da ultima a
 
 /*Tabela que armazena os estoques*/
 CREATE TABLE uvv.lojas.estoques (
-                estoque_id 					NUMERIC(38) NOT NULL,
-                loja_id_estoques 			NUMERIC(38) NOT NULL,
+                estoque_id 			NUMERIC(38) NOT NULL,
+                loja_id_estoques 		NUMERIC(38) NOT NULL,
                 produto_id_estoques 		NUMERIC(38) NOT NULL,
                 quantidade_estoques 		NUMERIC(38) NOT NULL,
                 CONSTRAINT pk_estoques 		PRIMARY KEY (estoque_id)
@@ -104,12 +103,12 @@ COMMENT ON COLUMN uvv.lojas.estoques.quantidade_estoques 		IS 'Quantidade de ite
 
 /*Tabela que armazena os Clientes*/
 CREATE TABLE uvv.lojas.clientes (
-                cliente_id 				NUMERIC(38) NOT NULL,
+                cliente_id 			NUMERIC(38) NOT NULL,
                 email_clientes 			VARCHAR(255) NOT NULL,
                 nome_clientes 			VARCHAR(255) NOT NULL,
-                telefone1 				VARCHAR(20),
-                telefone2 				VARCHAR(20),
-                telefone3 				VARCHAR(20),
+                telefone1 			VARCHAR(20),
+                telefone2 			VARCHAR(20),
+                telefone3 			VARCHAR(20),
                 CONSTRAINT pk_clientes  PRIMARY KEY (cliente_id)
 );
 
@@ -249,4 +248,3 @@ REFERENCES uvv.lojas.pedidos (pedido_id)
 ON DELETE NO ACTION
 ON UPDATE NO ACTION
 NOT DEFERRABLE;
-
