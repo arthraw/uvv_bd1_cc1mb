@@ -12,15 +12,15 @@ CREATE TABLE produtos (
                 CONSTRAINT pk_produtos PRIMARY KEY (produto_id)
 );
 COMMENT ON TABLE produtos IS 'Tabela que armazena os dados dos produtos em estoque.';
-COMMENT ON COLUMN produtos.produto_id IS 'CÛdigo de identificaÁ„o para cada produto. ';
+COMMENT ON COLUMN produtos.produto_id IS 'C√≥digo de identifica√ß√£o para cada produto. ';
 COMMENT ON COLUMN produtos.nome_produtos IS 'Nome de cada um dos produtos.';
-COMMENT ON COLUMN produtos.preco_unitario_produtos IS 'PreÁo unit·rio dos produtos.';
+COMMENT ON COLUMN produtos.preco_unitario_produtos IS 'Pre√ßo unit√°rio dos produtos.';
 COMMENT ON COLUMN produtos.detalhes IS 'Detalhes dos produtos.';
 COMMENT ON COLUMN produtos.imagem IS 'Imagens dos produtos.';
 COMMENT ON COLUMN produtos.imagem_mime_type IS 'Tipo do arquivo mime das imagens dos produtos.';
 COMMENT ON COLUMN produtos.imagem_arquivo IS 'Tipo das imagens dos produtos.';
 COMMENT ON COLUMN produtos.imagem_charset IS 'Conjunto de caracteres que representam as imagens dos produtos.';
-COMMENT ON COLUMN produtos.imagem_ultima_atualizacao IS 'Data de ultima atualizaÁ„o das imagens dos produtos.';
+COMMENT ON COLUMN produtos.imagem_ultima_atualizacao IS 'Data de ultima atualiza√ß√£o das imagens dos produtos.';
 
 
 CREATE TABLE lojas (
@@ -37,11 +37,11 @@ CREATE TABLE lojas (
                 logo_ultima_atualizacao DATE,
                 CONSTRAINT pk_lojas PRIMARY KEY (loja_id)
 );
-COMMENT ON TABLE lojas IS 'Tabela responsavÈl por armazenar dados sobre as lojas.';
-COMMENT ON COLUMN lojas.loja_id IS 'CÛdigo de identificaÁ„o para cada loja. ';
+COMMENT ON TABLE lojas IS 'Tabela responsav√©l por armazenar dados sobre as lojas.';
+COMMENT ON COLUMN lojas.loja_id IS 'C√≥digo de identifica√ß√£o para cada loja. ';
 COMMENT ON COLUMN lojas.nome_lojas IS 'Nome de cada loja existente.';
-COMMENT ON COLUMN lojas.endereco_web IS 'EndereÁo do site de cada loja.';
-COMMENT ON COLUMN lojas.endereco_fisico IS 'EndereÁo das lojas fisicas.';
+COMMENT ON COLUMN lojas.endereco_web IS 'Endere√ßo do site de cada loja.';
+COMMENT ON COLUMN lojas.endereco_fisico IS 'Endere√ßo das lojas fisicas.';
 COMMENT ON COLUMN lojas.latitude IS 'Latitude das lojas cadastradas.
 ';
 COMMENT ON COLUMN lojas.longitude IS 'Longitude das lojas cadastradas.';
@@ -51,7 +51,7 @@ COMMENT ON COLUMN lojas.logo IS 'Logo de cada loja.
 COMMENT ON COLUMN lojas.logo_mime_type IS 'Tipo do arquivo mime da logo.';
 COMMENT ON COLUMN lojas.logo_arquivo IS 'Arquivo que se encontra a logo.';
 COMMENT ON COLUMN lojas.logo_charset IS 'Conjunto de caracteres que representam a logo.';
-COMMENT ON COLUMN lojas.logo_ultima_atualizacao IS 'Data da ultima atualizaÁ„o na logo da loja.';
+COMMENT ON COLUMN lojas.logo_ultima_atualizacao IS 'Data da ultima atualiza√ß√£o na logo da loja.';
 
 
 CREATE TABLE estoques (
@@ -61,10 +61,10 @@ CREATE TABLE estoques (
                 quantidade_estoques NUMERIC(38) NOT NULL,
                 CONSTRAINT pk_estoques PRIMARY KEY (estoque_id)
 );
-COMMENT ON TABLE estoques IS 'Tabela responsavÈl por armazenar os dados de estoque dos produtos.';
-COMMENT ON COLUMN estoques.estoque_id IS 'CÛdigo de identificaÁ„o dos produtos em estoque.';
-COMMENT ON COLUMN estoques.loja_id_estoques IS 'CÛdigo de identificaÁ„o para cada loja. ';
-COMMENT ON COLUMN estoques.produto_id_estoques IS 'CÛdigo de identificaÁ„o para cada produto.';
+COMMENT ON TABLE estoques IS 'Tabela responsav√©l por armazenar os dados de estoque dos produtos.';
+COMMENT ON COLUMN estoques.estoque_id IS 'C√≥digo de identifica√ß√£o dos produtos em estoque.';
+COMMENT ON COLUMN estoques.loja_id_estoques IS 'C√≥digo de identifica√ß√£o para cada loja. ';
+COMMENT ON COLUMN estoques.produto_id_estoques IS 'C√≥digo de identifica√ß√£o para cada produto.';
 COMMENT ON COLUMN estoques.quantidade_estoques IS 'Quantidade de itens no estoque.';
 
 
@@ -78,7 +78,7 @@ CREATE TABLE clientes (
                 CONSTRAINT pk_clientes PRIMARY KEY (cliente_id)
 );
 COMMENT ON TABLE clientes IS 'Tabela que armazena os dados dos clientes.';
-COMMENT ON COLUMN clientes.cliente_id IS 'CÛdigo de identificaÁ„o exclusivo para cada usu·rio. ';
+COMMENT ON COLUMN clientes.cliente_id IS 'C√≥digo de identifica√ß√£o exclusivo para cada usu√°rio. ';
 COMMENT ON COLUMN clientes.email_clientes IS 'Email dos clientes.';
 COMMENT ON COLUMN clientes.nome_clientes IS 'Nome dos clientes registrados.';
 COMMENT ON COLUMN clientes.telefone1 IS 'Telefone dos clientes.';
@@ -94,11 +94,11 @@ CREATE TABLE envios (
                 status_envios VARCHAR(15) NOT NULL,
                 CONSTRAINT pk_envios PRIMARY KEY (envio_id)
 );
-COMMENT ON TABLE envios IS 'Tabela responsavÈl por armazenar os envios.';
-COMMENT ON COLUMN envios.envio_id IS 'CÛdigo de identificaÁ„o dos envios. ';
-COMMENT ON COLUMN envios.loja_id_envios IS 'CÛdigo de identificaÁ„o para cada loja. ';
-COMMENT ON COLUMN envios.cliente_id_envios IS 'CÛdigo de identificaÁ„o exclusivo para cada usu·rio. ';
-COMMENT ON COLUMN envios.endereco_entrega IS 'EndereÁo de entrega dos produtos comprados.';
+COMMENT ON TABLE envios IS 'Tabela responsav√©l por armazenar os envios.';
+COMMENT ON COLUMN envios.envio_id IS 'C√≥digo de identifica√ß√£o dos envios. ';
+COMMENT ON COLUMN envios.loja_id_envios IS 'C√≥digo de identifica√ß√£o para cada loja. ';
+COMMENT ON COLUMN envios.cliente_id_envios IS 'C√≥digo de identifica√ß√£o exclusivo para cada usu√°rio. ';
+COMMENT ON COLUMN envios.endereco_entrega IS 'Endere√ßo de entrega dos produtos comprados.';
 COMMENT ON COLUMN envios.status_envios IS 'Status dos envios.';
 
 
@@ -110,12 +110,12 @@ CREATE TABLE pedidos (
                 loja_id_pedidos NUMERIC(38) NOT NULL,
                 CONSTRAINT pk_pedidos PRIMARY KEY (pedido_id)
 );
-COMMENT ON TABLE pedidos IS 'Tabela responsavÈl por guardar os pedidos dos clientes.';
-COMMENT ON COLUMN pedidos.pedido_id IS 'CÛdigo de identificaÁ„o dos pedidos.';
+COMMENT ON TABLE pedidos IS 'Tabela responsav√©l por guardar os pedidos dos clientes.';
+COMMENT ON COLUMN pedidos.pedido_id IS 'C√≥digo de identifica√ß√£o dos pedidos.';
 COMMENT ON COLUMN pedidos.data_hora IS 'Registro da hora na qual foi feito o pedido.';
-COMMENT ON COLUMN pedidos.cliente_id_pedidos IS 'CÛdigo de identificaÁ„o exclusivo para cada usu·rio. ';
+COMMENT ON COLUMN pedidos.cliente_id_pedidos IS 'C√≥digo de identifica√ß√£o exclusivo para cada usu√°rio. ';
 COMMENT ON COLUMN pedidos.status_pedidos IS 'Status dos pedidos.';
-COMMENT ON COLUMN pedidos.loja_id_pedidos IS 'CÛdigo de identificaÁ„o para cada loja. ';
+COMMENT ON COLUMN pedidos.loja_id_pedidos IS 'C√≥digo de identifica√ß√£o para cada loja. ';
 
 
 CREATE TABLE pedidos_itens (
@@ -124,16 +124,16 @@ CREATE TABLE pedidos_itens (
                 numero_da_linha NUMERIC(38) NOT NULL,
                 preco_unitario_itens NUMERIC(10,2) NOT NULL,
                 quantidade NUMERIC(38) NOT NULL,
-                envio_id NUMERIC(38) NOT NULL,
+                envio_id NUMERIC(38),
                 CONSTRAINT pk_pedidos_itens PRIMARY KEY (pedido_id_itens, produto_id_itens)
 );
-COMMENT ON TABLE pedidos_itens IS 'Tabela responsavÈl por guardar quais itens foram pedidos pelo cliente.';
-COMMENT ON COLUMN pedidos_itens.pedido_id_itens IS 'CÛdigo de identificaÁ„o dos pedidos.';
-COMMENT ON COLUMN pedidos_itens.produto_id_itens IS 'CÛdigo de identificaÁ„o dos produto.';
-COMMENT ON COLUMN pedidos_itens.numero_da_linha IS 'N˙mero da linha do produto.';
-COMMENT ON COLUMN pedidos_itens.preco_unitario_itens IS 'PreÁo unit·rio dos produtos.';
+COMMENT ON TABLE pedidos_itens IS 'Tabela responsav√©l por guardar quais itens foram pedidos pelo cliente.';
+COMMENT ON COLUMN pedidos_itens.pedido_id_itens IS 'C√≥digo de identifica√ß√£o dos pedidos.';
+COMMENT ON COLUMN pedidos_itens.produto_id_itens IS 'C√≥digo de identifica√ß√£o dos produto.';
+COMMENT ON COLUMN pedidos_itens.numero_da_linha IS 'N√∫mero da linha do produto.';
+COMMENT ON COLUMN pedidos_itens.preco_unitario_itens IS 'Pre√ßo unit√°rio dos produtos.';
 COMMENT ON COLUMN pedidos_itens.quantidade IS 'Quantidade de itens pedidos.';
-COMMENT ON COLUMN pedidos_itens.envio_id IS 'CÛdigo de identificaÁ„o dos envios. ';
+COMMENT ON COLUMN pedidos_itens.envio_id IS 'C√≥digo de identifica√ß√£o dos envios. ';
 
 
 ALTER TABLE pedidos_itens ADD CONSTRAINT produtos_pedidos_itens_fk
