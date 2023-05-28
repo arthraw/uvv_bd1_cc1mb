@@ -4,7 +4,7 @@
 
 ### Professor: Abrantes Araújo Silva Filho
 
-# Sobre o trabalho
+## Sobre o trabalho
 
 ### Este repositório é dedicado ao pset de banco de dados I e tem como principal banco o postgreSQL
 ### Neste trabalho foram utilizados alem do postgresql mas tambem o SQL Power Architect para realizar 
