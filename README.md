@@ -1,8 +1,8 @@
 # PSET 1    
 ---
-# Aluno: Arthur de Salles Andrade
+### Aluno: Arthur de Salles Andrade
 
-# Professor: Abrantes Araújo Silva Filho
+### Professor: Abrantes Araújo Silva Filho
 
 # Sobre o trabalho
 
