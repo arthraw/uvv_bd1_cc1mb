@@ -3,7 +3,7 @@
 ### Aluno: Arthur de Salles Andrade
 
 ### Professor: Abrantes Araújo Silva Filho
-
+---
 ## Sobre o trabalho
 
 ### Este repositório é dedicado ao pset de banco de dados I e tem como principal banco o postgreSQL
